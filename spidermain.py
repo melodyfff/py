@@ -22,7 +22,7 @@ DIR_PATH = r"F:\pydata"  # 下载图片保存路径
 def get_urls():
     """ 获取 mzitu 网站下所有套图的 url
     """
-    page_urls = ['http://www.mzitu.com/{cnt}'.format(cnt=cnt)
+    page_urls = ['http://www.mzitu.com/page/{cnt}'.format(cnt=cnt)
                  for cnt in range(1, 10)]
     print("Please wait for second ...")
     img_urls = []
