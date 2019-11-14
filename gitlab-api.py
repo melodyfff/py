@@ -55,13 +55,15 @@ def analysis_html(html):  # 解析页面，提取用户名
 
 def get_total_page_list(html):
     pages = []
-    for i in total_page(html):
-        pages.append('https://gitlab.com/fdroid/fdroidclient/-/forks?page=' + str(i))
+    total = total_page(html)
+    while total > 0:
+        pages.append('https://gitlab.com/fdroid/fdroidclient/-/forks?page=' + str(total))
+        total -= 1
     print(pages)
     return pages
 
 
-#save_html(url_open('https://gitlab.com/fdroid/fdroidclient/-/forks?page=1'))  # 打开网页并保存到本地
+# save_html(url_open('https://gitlab.com/fdroid/fdroidclient/-/forks?page=1'))  # 打开网页并保存到本地
 total_page(open('hello.html', 'r', encoding='utf-8'))  # 统计总页数
 get_total_page_list(open('hello.html', 'r', encoding='utf-8'))  # 获取请求列表
 analysis_html(open('hello.html', 'r', encoding='utf-8'))  # 读取本地文件调试
