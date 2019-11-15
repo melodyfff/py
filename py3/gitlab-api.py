@@ -1,5 +1,6 @@
-# encoding: utf-8
+# coding=utf-8
 # 提取gitlab的forks用户数量
+# 依赖 ： pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple BeautifulSoup4
 import urllib.request
 from bs4 import BeautifulSoup
 import re
