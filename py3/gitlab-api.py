@@ -29,7 +29,7 @@ def url_open(url, time_out=20):  # 打开网页如： https://gitlab.com/fdroid/
                    '_gitlab_session=ed72896f8bd686e90b48e5f383f4f52a; _biz_nA=11; _biz_pendingA=%5B%5D; '
                    '_sp_id.6b85=943612f0-695c-4413-937b-ae3e2fdebf57.1545574812.8.1573733600.1546704064.dbd2e18e-cccf'
                    '-409d-895b-c6916a5cfe51111')
-    req.add_header('Host', 'gitlab.cae.com')
+    req.add_header('Host', 'gitlab.com')
 
     response = urllib.request.urlopen(url, timeout=time_out, context=ssl._create_unverified_context())  # 忽略ssl认证
     html = response.read().decode("utf-8")
