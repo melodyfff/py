@@ -1,2 +1,3 @@
-# py
-have fun in pyhton
+# Python
+
+Just have fun in pyhton
